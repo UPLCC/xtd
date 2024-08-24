@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html id="boid">
+  <head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>系统2.0非线性动画版</title>
+  </head>
+  <body>	
+<p id="sj" class="sj">10:00</p>
+<div id="rj" class="rj" onclick="if(rjdksz == 0){dk();}">
+<img id="rjtp" class="rjtp" src="sz.jpg"/>
+<center>
+<h1 id="hypertext" class="hypertext" style="display:none;">UPLCC<color style="color:#13aeff;">OS</color></h1>
+</center>
+</div>
+<div id="xbt" class="xbt" onclick="if(rjgbsz == 1){rjgb();}"></div>
+  </body>
+<style>
+body{
+background-image:url('bz.jpg');
+margin:0;
+padding:0;
+}
+.sj{
+font-size:60px;
+color:white;
+margin-left:50px;
+margin-top:100px;
+}
+.rj{
+position:absolute;
+width:70px;
+height:70px;
+border-radius:20px;
+background-color:white;
+margin-left:30px;
+margin-top:50px;
+}
+.rjtp{
+width:70px;
+height:70px;
+border-radius:20px;
+}
+.xbt{
+width:100px;
+height:6px;
+background-color:white;
+border-radius:100px;
+position:absolute;
+bottom:1%;
+left:0;
+right:0;
+margin:0 auto;
+}
+.hypertext{
+position:absolute;
+top:0;
+left:0;
+right:0;
+margin:0 auto;
+text-align:center;
+margin-top:20px;
+}
+@keyframes dka{
+0%{
+width:70px;
+height:70px;
+border-radius:20px;
+background-color:white;
+margin-left:30px;
+margin-top:50px;
+font-size:0px;
+}
+50%{
+width:93vw;
+height:93%;
+border-radius:23px;
+background-color:white;
+margin-left:7px;
+margin-top:-220px;
+font-size:13px;
+}
+70%{
+width:98vw;
+height:98%;
+border-radius:27px;
+background-color:white;
+margin-left:2px;
+margin-top:-230px;
+font-size:14px;
+}
+100%{
+width:100vw;
+height:100%;
+border-radius:30px;
+background-color:white;
+margin-left:0px;
+margin-top:-240px;
+font-size:15px;
+}
+}
+@keyframes dkc{
+0%{
+opacity:0;
+}
+100%{
+opacity:1;
+}
+}
+@keyframes gba{
+0%{
+opacity:0;
+width:100vw;
+height:100vh;
+border-radius:30px;
+}
+90%{
+opacity:1;
+}
+100%{
+width:70px;
+height:70px;
+border-radius:20px;
+}
+}
+@keyframes gbb{
+0%{
+opacity:0;
+width:55vw;
+height:50vh;
+border-radius:30px;
+}
+70%{
+opacity:1;
+}
+100%{
+width:70px;
+height:70px;
+border-radius:20px;
+}
+}
+@keyframes rjgba{
+0%{
+filter: blur(0px);
+}
+100%{
+filter: blur(2px);
+}
+}
+@keyframes rjgbb{
+0%{
+position:absolute;
+width:100vw;
+height:100vh;
+margin-left:0px;
+margin-top:-240px;
+border-radius:30px;
+filer: blur(0px);
+font-size:15px;
+}
+10%{
+position:absolute;
+width:90vw;
+height:85vh;
+margin-left:5px;
+margin-top:-220px;
+border-radius:30px;
+filer: blur(0px);
+font-size:15px;
+}
+20%{
+position:absolute;
+width:75vw;
+height:70vh;
+margin-left:6px;
+margin-top:-190px;
+border-radius:29px;
+filer: blur(0px);
+font-size:14px;
+}
+30%{
+position:absolute;
+width:60vw;
+height:55vh;
+margin-left:10px;
+margin-top:-160px;
+border-radius:27px;
+filer: blur(0px);
+font-size:10px;
+}
+40%{
+position:absolute;
+width:50vw;
+height:45vh;
+margin-left:15px;
+margin-top:-100px;
+border-radius:25px;
+filer: blur(0px);
+font-size:7px;
+}
+50%{
+position:absolute;
+width:40vw;
+height:35vh;
+margin-left:20px;
+margin-top:-50px;
+border-radius:24px;
+filer: blur(0px);
+font-size:6px;
+}
+60%{
+position:absolute;
+width:30vw;
+height:25vh;
+margin-left:23px;
+margin-top:0px;
+border-radius:23px;
+filer: blur(0px);
+font-size:5px;
+}
+70%{
+position:absolute;
+width:100px;
+height:130px;
+margin-left:25px;
+margin-top:30px;
+border-radius:22px;
+filer: blur(0px);
+font-size:3px;
+}
+85%{
+position:absolute;
+width:75px;
+height:80px;
+margin-left:27px;
+margin-top:40px;
+border-radius:21px;
+filer: blur(0px);
+font-size:1px;
+}
+100%{
+position:absolute;
+width:70px;
+height:70px;
+margin-left:30px;
+margin-top:50px;
+border-radius:20px;
+filer: blur(0px);
+font-size:1px;
+}
+}
+@keyframes rjgbc{
+0%{
+filter: blur(0px);
+}
+100%{
+filter: blur(1px);
+}
+}
+@keyframes rjgbd{
+0%{
+position:absolute;
+width:80vw;
+height:75vh;
+margin-left:10px;
+margin-top:-125px;
+border-radius:25px;
+filer: blur(2px);
+font-size:8px;
+}
+20%{
+position:absolute;
+width:85vw;
+height:80vh;
+margin-left:15px;
+margin-top:-160px;
+border-radius:27px;
+filer: blur(2px);
+font-size:9px;
+}
+100%{
+position:absolute;
+width:70px;
+height:70px;
+margin-left:30px;
+margin-top:50px;
+border-radius:20px;
+filer: blur(0px);
+font-size:1px;
+}
+}
+</style>
+<script>
+rjdksz = 0;
+rjgbsz = 0;
+sja = Date();
+sjsz = sja.substring(15,21);
+document.getElementById("sj").innerHTML=sjsz;
+setInterval(function (){
+sja = Date();
+sjsz = sja.substring(15,21);
+document.getElementById("sj").innerHTML=sjsz;
+},1000);
+function dk(){
+rjdksz = 1;
+rjgbsz = 1;
+rj.style.animationName="dka";
+rj.style.animationDuration="0.6s";
+rjtp.style.display="none";
+hypertext.style.animationName="dkc";
+hypertext.style.animationDuration="0.6s";
+boid.style.animationName="rjgba";
+boid.style.animationDuration="0.6s";
+setTimeout(function (){
+boid.style.animation="none";
+},600);
+setTimeout(function (){
+rjtp.style.display="none";
+setTimeout(function (){
+rjtp.style.display="none";
+},1);
+},300);
+rj.style.filter="blur(0px)";
+rj.style.width="100vw";
+rj.style.height="100%";
+rj.style.marginLeft="0px";
+rj.style.marginTop="-240px";
+rj.style.borderRadius="0px";
+hypertext.style.display="block";
+hypertext.style.display="block";
+dddh = 1;
+setTimeout(function (){
+dddh = 2;
+},400);
+setTimeout(function (){
+rjtp.style.display="none";
+hypertext.style.display="block";
+xbt.style.backgroundColor="gray";
+},170);
+if(dddh == 2){
+setTimeout(function (){
+xbt.style.backgroundColor="gray";
+rjtp.style.display="none";
+hypertext.style.display="block";
+},600);
+}
+}
+function rjgb(){
+rjdksz = 0;
+rjgbsz = 0;
+if(dddh == 2){
+rj.style.animationName="rjgbb";
+rj.style.animationDuration="0.6s";
+if(dddh == 2){
+rjtp.style.animation="none";
+}
+boid.style.animationName="rjgba";
+boid.style.animationDuration="0.6s";
+rj.style.filter="blur(0px)";
+rj.style.width="70px";
+rj.style.height="70px";
+rj.style.marginLeft="30px";
+rj.style.marginTop="50px";
+rj.style.borderRadius="30px";
+setTimeout(function (){
+hypertext.style.display="none";
+rjtp.style.display="block";
+hypertext.style.display="none";
+},400);
+setTimeout(function (){
+setTimeout(function (){
+rjtp.style.display="none";
+},10);
+xbt.style.backgroundColor="white";
+hypertext.style.display="none";
+},70);
+dddh = 0;
+}else{
+rjtp.style.animation="none";
+rj.style.animationName="rjgbd";
+rj.style.animationDuration="0.5s";
+boid.style.animationName="rjgbc"
+boid.style.animationDuration="0.5s";
+rj.style.filter="blur(0px)";
+rj.style.width="70px";
+rj.style.height="70px";
+rj.style.marginLeft="30px";
+rj.style.marginTop="50px";
+rj.style.borderRadius="30px";
+setTimeout(function (){
+hypertext.style.display="none";
+hypertext.style.display="none";
+},230);
+setTimeout(function (){
+xbt.style.backgroundColor="white";
+hypertext.style.display="none";
+},30);
+setTimeout(function (){
+hypertext.style.display="none";
+rjtp.style.display="block";
+setTimeout(function (){
+rjtp.style.display="none";
+rjtp.style.display="block";
+},10);
+},350);
+}
+}
+</script>
+</html>
